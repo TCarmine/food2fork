@@ -1,0 +1,10 @@
+
+body{
+    /* important otherwise boot override it */
+    font-family: 'Open Sans', sans-serif !important;
+
+}
+    
+.text-slanted{
+    font-family: 'Courgette', cursive;
+}
