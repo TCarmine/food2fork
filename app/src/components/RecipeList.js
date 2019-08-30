@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 
-export default class Recipe extends Component {
+export default class RecipeList extends Component {
     render() {
         return (
             <React.Fragment>
-                Hello From Recipe
+                Hello from List
             </React.Fragment>
         )
     }

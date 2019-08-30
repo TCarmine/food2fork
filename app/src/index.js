@@ -1,12 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, { Component } from 'react'
+
 import './index.css';
 
-class App extends React.Component{
+class App extends Component{
     render(){
         return(
-            <div>Hello World</div>
-        )
+            <React.Fragment>
+                Hello World from Index
+                
+            </React.Fragment>
+        );
     }
 }
 
