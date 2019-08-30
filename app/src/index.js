@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom';
-import './index.css';
+// import './index.css';
 import {recipes} from './tempList';
 import RecipeList from './components/RecipeList';
 import RecipeDetails from './components/RecipeDetails';
@@ -10,7 +10,7 @@ class App extends Component{
         return(
             <React.Fragment>
                     <RecipeList />
-                    Hello World from Index
+                                   
                     <RecipeDetails />    
             </React.Fragment>
         );
