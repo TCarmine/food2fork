@@ -1,11 +1,16 @@
 module.exports = function (api) {
     api.cache(true);
-    presets: [ "@babel/preset-env","@babel/preset-react"  
-       {
-          useBuiltIns: "usage",
-          corejs: 3
-       }],
-    plugins: [ 
+    const presets= [
+        [ 
+            "@babel/preset-env",
+              {
+                    useBuiltIns: "usage",
+                    corejs: 3
+              }
+         ],
+         "@babel/preset-react",
+    ];  
+    const plugins = [ 
         ["@babel/transform-runtime", 
             {
                   corejs: 3,
@@ -13,9 +18,9 @@ module.exports = function (api) {
         ],
     "@babel/plugin-transform-arrow-functions", 
     "@babel/plugin-proposal-class-properties", 
-   ]
-   return {
-    presets,
-    plugins,
-  }
+   ];
+    return {
+        presets,
+        plugins,
+    };
   }
