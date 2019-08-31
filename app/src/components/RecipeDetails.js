@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {recipes} from '/home/ca/Desktop/code/food2fork/app/src/tempDetails.js';
+import {recipes} from '../tempList';
 
 
 export default class RecipeDetails extends Component {

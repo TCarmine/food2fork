@@ -1,4 +1,4 @@
-export const localRecipes = [
+export const recipes = [
     {
       recipe_id: 35382,
       image_url:

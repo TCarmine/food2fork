@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom';
 import './style.css';
-import {localRecipes} from './tempList';
+import {recipes} from './tempList';
 import "core-js/stable";
 import "regenerator-runtime/runtime";
 import RecipeList from './components/RecipeList';
@@ -11,7 +11,7 @@ class Index extends Component{
    constructor(){
      super();
      this.state = {
-         recipes:[localRecipes],  
+         recipes:[recipes],  
          url:"https://www.food2fork.com/api/search?key=bbdf4b18758a4bccc790efded3977235"
       };
    }   
@@ -34,7 +34,7 @@ class Index extends Component{
       // console.log(this.state.recipes);
          return(
             <React.Fragment>
-                    <RecipeList recipes={this.state.localRecipes} />
+                    <RecipeList recipes={this.state.recipes} />
                    { }
                       
                     <RecipeDetails />    
