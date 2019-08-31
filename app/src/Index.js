@@ -8,13 +8,12 @@ import RecipeList from './components/RecipeList';
 import RecipeDetails from './components/RecipeDetails';
 
 class Index extends Component{
-   constructor(){
-     super();
-     this.state = {
-         recipes:[localRecipes],  
+   
+     state = {
+         recipes:localRecipes,  
          url:"https://www.food2fork.com/api/search?key=bbdf4b18758a4bccc790efded3977235"
       };
-   }   
+    
    // async getRecipes(){
    //     try { 
    //       const rawData = await fetch(this.state.url);
