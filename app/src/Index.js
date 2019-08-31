@@ -4,8 +4,10 @@ import './style.css';
 import {recipes} from './tempList';
 import "core-js/stable";
 import "regenerator-runtime/runtime";
+import RecipeList from './components/RecipeList';
+import RecipeDetails from './components/RecipeDetails';
 
-class App extends Component{
+class Index extends Component{
     state = {
         url:"https://www.food2fork.com/api/search?key=bbdf4b18758a4bccc790efded3977235",
         recipes:[]  
@@ -37,4 +39,4 @@ class App extends Component{
     }
 }
 
-ReactDOM.render(<App />, document.getElementById('app'))
+ReactDOM.render(<Index />, document.getElementById('app'))
