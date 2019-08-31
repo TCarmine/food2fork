@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Recipe from './Recipe';
 import RecipeSearch from './RecipeSearch';
-import { recipes } from '../tempList';
+import { localRecipes } from '../tempList';
 
 export default class RecipeList extends Component {
     

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {recipes} from '../tempList';
+import {localRecipes} from '../tempList';
 
 
 export default class RecipeDetails extends Component {
