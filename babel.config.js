@@ -10,7 +10,7 @@ module.exports = {
             {
                   corejs: 3,
             } 
-         ],
+        ],
     "@babel/plugin-transform-arrow-functions", 
     "@babel/plugin-proposal-class-properties", 
    ]
