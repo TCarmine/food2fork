@@ -11,13 +11,13 @@ class App extends Component{
         recipes:[]  
     };
     async getRecipes(){
-       try{ const daterep = await fetch(this.state.url);
+       try{ 
+         const data = await fetch(this.state.url);
          const jsonData = await data.json();
          this.setState({
             recipes:jsonData.recipes
          });
-       }
-       catch (error){
+       } catch (error){
           console.log(error);
        }
     }
