@@ -11,7 +11,7 @@ class Index extends Component{
    constructor(){
      super();
      this.state = {
-         recipes:[],  
+         recipes:[recipes],  
          url:"https://www.food2fork.com/api/search?key=bbdf4b18758a4bccc790efded3977235"
       };
    }   
