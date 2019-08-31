@@ -1,5 +1,6 @@
-var path = require('path');
-var HtmlWebpackPlugin =  require('html-webpack-plugin');
+const path = require('path');
+const HtmlWebpackPlugin =  require('html-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     entry : './app/src/index.js',
@@ -8,28 +9,34 @@ module.exports = {
         filename: 'index_bundle.js'
     },
     module : {
+  
         rules : [
             { 
-                test : /\.(js ||.css)$/, 
+                test : /\.(js)$/, 
                 exclude: /(node_modules)/,
                 use:{
-                    ['babel-loader','style-loader', 'css-loader']
-                },    
-                
-                
-                options: {
-                presets: ['@babel/preset-env',
-                          '@babel/react',{
-                          'plugins': ['@babel/plugin-proposal-class-properties']}]
+                    loader:'babel-loader'
                 }
+            },
+            {
+              test: /\.css$/,
+              use: [
+                "style-loader",
+                MiniCssExtractPlugin.loader,
+                "css-loader",
+                "postcss-loader"
+              ]
             }    
+
         ]
     },
-    mode:'development',
     plugins : [
         new HtmlWebpackPlugin ({
             template : 'app/src/index.html'
-        })
+        }),
+        new MiniCssExtractPlugin({
+            filename: "app/src/style.css"
+        }),
     ]
 
 }
