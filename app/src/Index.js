@@ -10,7 +10,7 @@ import RecipeDetails from './components/RecipeDetails';
 class Index extends Component{
    
      state = {
-         recipes:localRecipes,  
+         alt:localRecipes,  
          url:"https://www.food2fork.com/api/search?key=bbdf4b18758a4bccc790efded3977235"
       };
     
@@ -33,7 +33,7 @@ class Index extends Component{
       // console.log(this.state.recipes);
          return(
             <React.Fragment>
-                    <RecipeList recipes={this.state.recipes} />
+                    <RecipeList stella={this.state.alt} />
                    { }
                       
                     <RecipeDetails />    

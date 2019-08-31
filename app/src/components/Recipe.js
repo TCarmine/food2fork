@@ -9,7 +9,7 @@ export default class Recipe extends Component {
             source_url,
             publisher,
             recipe_id
-        } = this.props.recipes;
+        } = this.props.pinco;
         return (
             <React.Fragment>
            <div className="col-10 mx-auto col-md-6 col-lg-4 my-3">

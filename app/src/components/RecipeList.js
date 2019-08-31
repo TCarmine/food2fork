@@ -6,7 +6,7 @@ import { localRecipes } from '../tempList';
 export default class RecipeList extends Component {
     
     render() {
-        const { recipes } = this.props;
+        const { stella } = this.props;
         return (
             <React.Fragment>
                 <h1>Hello from List </h1>
@@ -21,10 +21,9 @@ export default class RecipeList extends Component {
             {/* end of title */}
             <div className="row">
             {
-                 recipes.map(el => {
-                 return <Recipe key={el.recipe_id}
-                 recipes={el}/>;
-             })} 
+                stella.map(el => {
+                return <Recipe key={el.recipe_id} pinco={el}/>;
+            })} 
             </div>
       
             </React.Fragment>
