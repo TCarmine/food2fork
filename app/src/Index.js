@@ -8,31 +8,35 @@ import RecipeList from './components/RecipeList';
 import RecipeDetails from './components/RecipeDetails';
 
 class Index extends Component{
-    state = {
-        url:"https://www.food2fork.com/api/search?key=bbdf4b18758a4bccc790efded3977235",
-        recipes:[]  
-    };
-    async getRecipes(){
-       try{ 
-         const data = await fetch(this.state.url);
-         const jsonData = await data.json();
-         this.setState({
-            recipes:jsonData.recipes
-         });
-       } catch (error){
-          console.log(error);
-       }
-    }
+   constructor(){
+     super();
+     this.state = {
+         recipes:[],  
+         url:"https://www.food2fork.com/api/search?key=bbdf4b18758a4bccc790efded3977235"
+      };
+   }   
+   // async getRecipes(){
+   //     try { 
+   //       const rawData = await fetch(this.state.url);
+   //       const jsonData = await rawData.json();
+   //       this.setState({
+   //          recipes:jsonData.recipes
+   //       });
+   //     } catch (error){
+   //        console.log(error);
+   //     }
+   //  }
   
-    componentDidMount(){
-        this.getRecipes()
-    }   
+   //  componentDidMount(){
+   //      this.getRecipes();
+   //  }   
     render(){
-       console.log(this.state.recipes);
+      console.log(this.state.recipes);
          return(
             <React.Fragment>
                     <RecipeList />
-                                   
+              
+                      
                     <RecipeDetails />    
             </React.Fragment>
          );
