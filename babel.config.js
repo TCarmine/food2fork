@@ -5,5 +5,7 @@ module.exports = {
           corejs: 3,
        }, 
        "@babel/preset-react" ],
-    plugins: [ "@babel/plugin-transform-arrow-functions", "@babel/plugin-proposal-class-properties" ]
+    plugins: [ "@babel/plugin-transform-arrow-functions", "@babel/plugin-proposal-class-properties", "@babel/transform-runtime", {
+      corejs: 3,
+    } ]
   }
