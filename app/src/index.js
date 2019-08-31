@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom';
-// import './index.css';
+import './style.css';
 import {recipes} from './tempList';
 import "core-js/stable";
 import "regenerator-runtime/runtime";

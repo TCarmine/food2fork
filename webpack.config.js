@@ -5,8 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
     entry : {
         main: [
-			'@babel/polyfill',
-           './app/src/index.js',
+		   './app/src/index.js',
         ]
     },
     mode: 'development',    
@@ -33,7 +32,7 @@ module.exports = {
                 "style-loader",
                 MiniCssExtractPlugin.loader,
                 "css-loader",
-                "postcss-loader"
+                // "postcss-loader"
               ]
             }    
 
