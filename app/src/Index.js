@@ -13,7 +13,8 @@ class Index extends Component{
       recipes:localRecipes,  
       url:"https://www.food2fork.com/api/get?key=bbdf4b18758a4bccc790efded3977235",
       details_id:35375,
-      pageIndex:0
+      pageIndex:0,
+      search:''
       // details_id:`${localRecipes.recipe_id}`
    }; 
  
@@ -29,16 +30,19 @@ class Index extends Component{
           console.log(error);
        }
     }
-    componentDidMount(){
-        this.getRecipes();
-    }   
+   //  componentDidMount(){
+   //      this.getRecipes();
+   //  }   
 
     displayPage = (index) =>{
        switch(index){
           default:
              case 1:
                return(<RecipeList recipelist={this.state.recipes} 
-               handleDetails={this.handleDetails}/>)
+               handleDetails={this.handleDetails}
+               value={this.state.search}
+               handleChange={this.handleChange}
+               />)
              case 0:
                return(<RecipeDetails 
                   id = {this.state.details_id} 
@@ -63,7 +67,13 @@ class Index extends Component{
        });
     };
 
-     
+    handleChange = (e)=>{
+       console.log('hello from handle chnage')
+    } 
+    handleSubmit = (e)=>{
+        e.preventDefault();
+        console.log('hello from handle submit')
+    }
     render(){
       // console.log(this.state.recipes);
          return(

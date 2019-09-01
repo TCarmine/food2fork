@@ -6,11 +6,12 @@ import { localRecipes } from '../tempList';
 export default class RecipeList extends Component {
     
     render() {
-        const { recipelist,handleDetails } = this.props;
+        const { recipelist,handleDetails,value,handleSubmit,
+        handleChange } = this.props;
         return (
             <React.Fragment>
                 <h1>Hello from List </h1>
-            <RecipeSearch />  
+            <RecipeSearch value={value} handleChange={handleChange} handleSubmit={handleSubmit}/>  
             <div className="container my-5" />
             {/* title */}
             <div className="row">     
