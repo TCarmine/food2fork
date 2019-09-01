@@ -1,19 +1,6 @@
 import React, { Component } from 'react';
-<<<<<<< Updated upstream
-import {recipes} from '/home/ca/Desktop/code/food2fork/app/src/tempDetails.js';
-
-
-export default class RecipeDetails extends Component {
-    render() {
-        return (
-    <React.Fragment>
-        <h1>hello From Details</h1>
-    </React.Fragment>
-        )
-=======
 import { recipeDetails } from '../tempDetails';
-import { localRecipes } from '../tempList';
-
+// import { localRecipes } from '../tempList';
 
 export default class RecipeDetails extends Component {
     constructor(props){
@@ -22,19 +9,18 @@ export default class RecipeDetails extends Component {
         this.state = {
             recipe:recipeDetails,
             url:`https://www.food2fork.com/api/get?key=bbdf4b18758a4bccc790efded3977235&rId=35382=${this.props.id}`
-            // id:`https://www.food2fork.com/api/get?key=bbdf4b18758a4bccc790efded3977235&rId=35382=${this.props.id}`
-        };
+        }
     }
-
     async componentDidMount(){
         try { 
          const rawData = await fetch(this.state.url);
          const jsonData = await rawData.json();
-         this.setState({
-            recipe:jsonData
+             this.setState({
+                 recipe:jsonData.recipe
+             )};
          } catch (error){
-          console.log(error);
-       }
+            console.log(error);
+         }
     }  
     render() {
        
@@ -79,9 +65,9 @@ export default class RecipeDetails extends Component {
                     <ul className="list-group mt-4">
                         <h2 className="mt-3 mb-4">ingredients</h2>
                         {
-                            recipe.map((items)=>{
+                            ingredients.map((items,index)=>{
                                return(
-                                   <li className="list-group-item text-sland" key={id}>
+                                   <li className="list-group-item text-sland">
                                        {items}
                                    </li>
                                )
@@ -94,6 +80,4 @@ export default class RecipeDetails extends Component {
         </React.Fragment>
             )
         }
->>>>>>> Stashed changes
-    }
 }

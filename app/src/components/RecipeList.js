@@ -1,16 +1,32 @@
 import React, { Component } from 'react';
 import Recipe from './Recipe';
 import RecipeSearch from './RecipeSearch';
+import { localRecipes } from '../tempList';
 
 export default class RecipeList extends Component {
+    
     render() {
+        const { stella } = this.props;
         return (
             <React.Fragment>
                 <h1>Hello from List </h1>
-            <RecipeSearch />    
-            <Recipe />
-
+            <RecipeSearch />  
+            <div className="container my-5" />
+            {/* title */}
+            <div className="row">     
+               <div className="col-10 mx-auto col-md-6 text-center text-uppercase mb-3"> 
+                  <h1 className="text-slanted">Recipes List </h1>
+               </div>
+            </div>
+            {/* end of title */}
+            <div className="row">
+            {
+                stella.map(el => {
+                return <Recipe key={el.recipe_id} pinco={el}/>;
+            })} 
+            </div>
+      
             </React.Fragment>
-        )
+        );
     }
 }
