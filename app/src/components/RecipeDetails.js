@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { recipeDetails } from '../tempDetails';
+import { recipe } from '../tempDetails';
 // import { localRecipes } from '../tempList';
 
 export default class RecipeDetails extends Component {
@@ -7,7 +7,7 @@ export default class RecipeDetails extends Component {
         super(props);
         
         this.state = {
-            recipe:recipeDetails,
+            recipe:recipe,
             url:`https://www.food2fork.com/api/get?key=bbdf4b18758a4bccc790efded3977235&rId=35382=${this.props.id}`
         }
     }
@@ -34,9 +34,9 @@ export default class RecipeDetails extends Component {
       }
     }  
     render() {
-       
+        console.log(recipe);
        // prop destructuring
-       const{
+       const {
            image_url, 
            publisher,
            publisher_url,
@@ -44,7 +44,7 @@ export default class RecipeDetails extends Component {
            title,
            ingredients
         } = this.state.recipe;
-        // console.log(ingredients);
+        console.log(ingredients);
         return (
         <React.Fragment>
             <div className="container">
@@ -53,9 +53,9 @@ export default class RecipeDetails extends Component {
                     <button type="button" className="btn btn-warning mb-5 text-capitalize">
                         back to recipe list
                     </button>
-                    <img src={image_url} 
+                    <img src={recipe.image_url} 
                           className="d-block w-100" 
-                          alt="recipe"/>
+                          alt="recipe" />
                 </div>
                 {/* details */}
                 <div className="col-10 mx-auto col-md-6 my-3">
@@ -75,18 +75,17 @@ export default class RecipeDetails extends Component {
                     </a>
                     <ul className="list-group mt-4">
                         <h2 className="mt-3 mb-4">ingredients</h2>
-                        {
-                            ingredients.map((items,index)=>{
-                               return(
-                                   <li className="list-group-item text-sland">
-                                       {items}
-                                   </li>
-                               )
-                            })
-                        }
+                        {recipe.ingredients.map((item, index) => {
+                            return(
+                                <li key={index} className="list-group-item 
+                                text-slanted">
+                                       {item}
+                                </li>
+                            );    
+                        })}
                     </ul>
                 </div>
-                </div>
+              </div>
             </div>
         </React.Fragment>
             )
