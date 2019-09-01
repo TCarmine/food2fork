@@ -10,7 +10,7 @@ import RecipeDetails from './components/RecipeDetails';
 class Index extends Component{
 
    state = {
-      recipes:localRecipes,  
+      recipes:recipes,  
       url:"https://www.food2fork.com/api/get?key=49e68498e620e17c8a260b2053c71318 ",
       base_url:"https://www.food2fork.com/api/get?key=49e68498e620e17c8a260b2053c71318 ",
       details_id:35389,

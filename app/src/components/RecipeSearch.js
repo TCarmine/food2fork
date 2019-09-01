@@ -29,9 +29,8 @@ export default class RecipeSearch extends Component {
                     <button
                       type="submit"
                       className="input-group-text bg-primary text-white"
-                      
                     >
-                    <i className="fas fa-search"></i>
+                      <i className="fas fa-search" />
                     </button>
                   </div>
                 </div>

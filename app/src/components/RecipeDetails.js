@@ -25,7 +25,7 @@ export default class RecipeDetails extends Component {
     //   }
     // }
     state = {
-      recipe: {}
+      recipedetails: {}
     };
     
     async componentDidMount(){
@@ -37,7 +37,7 @@ export default class RecipeDetails extends Component {
             const jsonData = await data.json();
             this.setState(
               (state, props) => {
-                return { recipe: jsonData.recipe };
+                return { recipedetails: jsonData };
               },
               () => {}
             );
@@ -48,13 +48,13 @@ export default class RecipeDetails extends Component {
       
         render() {
           const {
-            image_url,
+            img_url,
             publisher,
             publisher_url,
             source_url,
             title,
             ingredients
-          } = this.state.recipe;
+          } = this.state.recipedetails;
           const { handleIndex } = this.props;
           if (!ingredients) {
             return <h1>loading ....</h1>;
@@ -72,7 +72,7 @@ export default class RecipeDetails extends Component {
                       >
                         back to recipe list
                       </button>
-                      <img src={image_url} className="d-block w-100" alt="recipe" />
+                      <img src={recipedetails.img_url} className="d-block w-100" alt="recipe" />
                     </div>
                     {/* details */}
                     <div className="col-10 mx-auto col-md-6 my-3">
