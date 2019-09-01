@@ -37,7 +37,7 @@ export default class RecipeDetails extends Component {
             const jsonData = await data.json();
             this.setState(
               (state, props) => {
-                return { recipedetails: jsonData };
+                return { recipedetails: jsonData.recipedetails };
               },
               () => {}
             );
