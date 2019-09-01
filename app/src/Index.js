@@ -44,7 +44,7 @@ class Index extends Component{
    //        console.log(error);
    //     }
    //  }
-   //  componentDidMount(){
+Z   //  componentDidMount(){
    //      this.getRecipes();
    //  }   
     render(){
