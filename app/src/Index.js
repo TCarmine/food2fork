@@ -39,9 +39,29 @@ class Index extends Component{
              case 1:
                return(<RecipeList recipelist={this.state.recipes} />)
              case 0:
-               return(<RecipeDetails id={this.state.details_id}/> )   
+               return(<RecipeDetails 
+                  id = {this.state.details_id} 
+                  
+                  handleIndex = {this.handleIndex}
+                  /> 
+               ); 
+
        }
-    }
+    };
+    
+    handleIndex = index =>{
+       this.setState({
+          pageIndex:index
+       })
+    };
+
+    handleDeatils = (index,id)=>{
+       this.setState({
+          pageIndex:index,
+          details_id:id
+       });
+    };
+
      
     render(){
       // console.log(this.state.recipes);
