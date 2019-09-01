@@ -42,6 +42,7 @@ class Index extends Component{
                handleDetails={this.handleDetails}
                value={this.state.search}
                handleChange={this.handleChange}
+               handleSubmit={this.handleSubmit}
                />)
              case 0:
                return(<RecipeDetails 
