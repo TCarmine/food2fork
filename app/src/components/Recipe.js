@@ -29,7 +29,8 @@ export default class Recipe extends Component {
                       <button type="button"
                       className="btn btn-primary 
                       text-capitalize">
-                          details</button>  
+                          details</button>
+                       <a href={source_url} className="btn btn-success mx-2 text-capitalize" target="_blank" rel="noopener noreferrer">recipe url</a>     
                     </div>
                </div>
            </div>

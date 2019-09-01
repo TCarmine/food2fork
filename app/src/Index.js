@@ -11,7 +11,9 @@ class Index extends Component{
    
      state = {
          alt:localRecipes,  
-         url:"https://www.food2fork.com/api/search?key=bbdf4b18758a4bccc790efded3977235"
+         url:"https://www.food2fork.com/api/get?key=bbdf4b18758a4bccc790efded3977235",
+         details_id:35382
+         // details_id:`${localRecipes.recipe_id}`
       };
     
    // async getRecipes(){
@@ -19,7 +21,7 @@ class Index extends Component{
    //       const rawData = await fetch(this.state.url);
    //       const jsonData = await rawData.json();
    //       this.setState({
-   //          recipes:jsonData.recipes
+   //          alt:jsonData.recipes
    //       });
    //     } catch (error){
    //        console.log(error);
@@ -33,10 +35,8 @@ class Index extends Component{
       // console.log(this.state.recipes);
          return(
             <React.Fragment>
-                    <RecipeList stella={this.state.alt} />
-                   { }
-                      
-                    <RecipeDetails />    
+                    {/* <RecipeList stella={this.state.alt} /> */}
+                    <RecipeDetails id={this.state.details_id}/>    
             </React.Fragment>
          );
     }
