@@ -58,7 +58,7 @@ export default class RecipeDetails extends Component {
                             ingredients.map((items,index)=>{
                                return(
                                    <li className="list-group-item text-sland">
-                                       {item}
+                                       {items}
                                    </li>
                                )
                             })
