@@ -14,7 +14,7 @@ class Index extends Component{
       url:"https://www.food2fork.com/api/get?key=bbdf4b18758a4bccc790efded3977235",
       base_url:"https://www.food2fork.com/api/get?key=bbdf4b18758a4bccc790efded3977235",
       details_id:35375,
-      pageIndex:0,
+      pageIndex:1,
       search:"",
       query:'&q='
       // details_id:`${localRecipes.recipe_id}`
